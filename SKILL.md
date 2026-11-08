@@ -1,6 +1,8 @@
 ---
 name: 3d-web-experience
 description: "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences. Use when: 3D website, three.js, WebGL, react three fiber, 3D experience."
+metadata:
+  source: vibeship-spawner-skills (Apache 2.0)
 ---
 
 # 3D Web Experience
@@ -31,7 +33,7 @@ Choosing the right 3D approach
 
 **When to use**: When starting a 3D web project
 
-~~~python
+```python
 ## 3D Stack Selection
 
 ### Options Comparison
@@ -43,7 +45,7 @@ Choosing the right 3D approach
 | Babylon.js | Games, heavy 3D | High | Maximum |
 
 ### Decision Tree
-~~~
+```
 Need quick 3D element?
 └── Yes → Spline
 └── No → Continue
@@ -55,10 +57,10 @@ Using React?
 Need max performance/control?
 └── Yes → Three.js vanilla
 └── No → Spline or R3F
-~~~
+```
 
 ### Spline (Fastest Start)
-~~~jsx
+```jsx
 import Spline from '@splinetool/react-spline';
 
 export default function Scene() {
@@ -66,10 +68,10 @@ export default function Scene() {
     <Spline scene="https://prod.spline.design/xxx/scene.splinecode" />
   );
 }
-~~~
+```
 
 ### React Three Fiber
-~~~jsx
+```jsx
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
@@ -87,8 +89,8 @@ export default function Scene() {
     </Canvas>
   );
 }
-~~~
-~~~
+```
+```
 
 ### 3D Model Pipeline
 
@@ -96,7 +98,7 @@ Getting models web-ready
 
 **When to use**: When preparing 3D assets
 
-~~~python
+```python
 ## 3D Model Pipeline
 
 ### Format Selection
@@ -108,17 +110,17 @@ Getting models web-ready
 | USDZ | Apple AR | Medium |
 
 ### Optimization Pipeline
-~~~
+```
 1. Model in Blender/etc
 2. Reduce poly count (< 100K for web)
 3. Bake textures (combine materials)
 4. Export as GLB
 5. Compress with gltf-transform
 6. Test file size (< 5MB ideal)
-~~~
+```
 
 ### GLTF Compression
-~~~bash
+```bash
 # Install gltf-transform
 npm install -g @gltf-transform/cli
 
@@ -126,10 +128,10 @@ npm install -g @gltf-transform/cli
 gltf-transform optimize input.glb output.glb \
   --compress draco \
   --texture-compress webp
-~~~
+```
 
 ### Loading in R3F
-~~~jsx
+```jsx
 import { useGLTF, useProgress, Html } from '@react-three/drei';
 import { Suspense } from 'react';
 
@@ -147,8 +149,8 @@ export default function Scene() {
     </Canvas>
   );
 }
-~~~
-~~~
+```
+```
 
 ### Scroll-Driven 3D
 
@@ -156,11 +158,11 @@ export default function Scene() {
 
 **When to use**: When integrating 3D with scroll
 
-~~~python
+```python
 ## Scroll-Driven 3D
 
 ### R3F + Scroll Controls
-~~~jsx
+```jsx
 import { ScrollControls, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
@@ -185,10 +187,10 @@ export default function Scene() {
     </Canvas>
   );
 }
-~~~
+```
 
 ### GSAP + Three.js
-~~~javascript
+```javascript
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -200,7 +202,7 @@ gsap.to(camera.position, {
   z: 5,
   y: 2,
 });
-~~~
+```
 
 ### Common Scroll Effects
 - Camera movement through scene
@@ -208,7 +210,7 @@ gsap.to(camera.position, {
 - Reveal/hide elements
 - Color/material changes
 - Exploded view animations
-~~~
+```
 
 ## Anti-Patterns
 
@@ -250,4 +252,4 @@ Optimize model size.
 
 ## Related Skills
 
-Works well with: scroll-experience, interactive-portfolio, frontend, landing-page-design
+Works well with: `scroll-experience`, `interactive-portfolio`, `frontend`, `landing-page-design`
