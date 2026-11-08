@@ -70,4 +70,4 @@ claude-3d-web-experience-skill/
 
 ## License
 
-The skill's source metadata specifies Apache License 2.0. The repository uses that license for the skill package; see the root LICENSE file. The skill frontmatter retains its upstream license metadata.
+Released under the MIT License. Copyright (c) 2026 Brajesh Kumar. See the root `LICENSE` file for the complete terms.
